@@ -135,7 +135,7 @@ To address the dataset's imbalance, a careful selection of five distinct data ba
 - Random Undersampling
 - Synthetic Minority Over-sampling Technique (SMOTE)
 - Adaptive Synthetic Sampling (ADASYN)
-- Neighborhood Cleaning Rule Undersampling (edited nearest neighbor (ENN)).
+- Neighborhood Cleaning Rule Undersampling (NCR (edited nearest neighbor)).
 
 ### Algorithm Selection
 
@@ -154,13 +154,33 @@ Following the conducted grid searches, optimal parameters were determined for ea
 Training was conducted for each unique combination of algorithm, balancing technique, and data subset. Subsequently, results were obtained for each algorithm, and the best result was selected based on the evaluation metrics employed. 
 Given the utilization of various algorithms, distinct subsets of data, and diverse data balancing techniques, multiple result tables are generated.
 
-![](Images/SupportVector.png)
-<img src = "Images/SupportVector.png">
+
+<img src = "AI-Based Employee Promotion Prediction/Images/SupportVector.png">
+
+These results display the performance of the Support Vector Machine across various balancing techniques and different data subsets.
+
+
+<img src = "AI-Based Employee Promotion Prediction/Images/RandomForest.png">
+
+
+These results display the performance of the Random Forest classifier at various balancing techniques and different data subsets.
+
+<img src = "AI-Based Employee Promotion Prediction/Images/DecisionTree.png">
+
+These results display the performance of the Decision Tress algorithm across various balancing techniques and different data subsets.
+
+<img src = "AI-Based Employee Promotion Prediction/Images/GuassianNaive Bayes.png">
+
+These results display the performance of the Guassian Naive Bayes at different balancing techniques and different data subsets.
+
+<img src = "AI-Based Employee Promotion Prediction/Images/LogisticRegression.png">
+
+These results display the performance of the Logistic Regression that combines various balancing techniques and different data subsets.
 
 
 The table below presents a comparison of the best-performing algorithm, along with its corresponding F1 score, the optimal resampling technique employed, and the most effective feature data variation utilized: 
 
-![Optimum Parameters](https://github.com/Juliana-Omoba/test/assets/71232282/fbb0d86f-dfdd-4fa0-acf6-ce7045e873de)
+<img src = "AI-Based Employee Promotion Prediction/Images/AlgorithmComparison.png">
 
 
 
