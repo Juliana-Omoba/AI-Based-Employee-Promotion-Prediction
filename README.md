@@ -151,21 +151,17 @@ Following the conducted grid searches, optimal parameters were determined for ea
 
 ### Results/ Findings
 
-Training was conducted for each unique combination of algorithm, balancing technique, and data subset. Subsequently, results were obtained for each algorithm, and the best result was selected based on the evaluation metrics employed.
-
-Neighborhood Cleaning Rule Undersampling
-Feature Variation 3      Acc  Prec  Rec   F1    Acc
-			0.78  0.76  0.33 0.46  0.93
+Training was conducted for each unique combination of algorithm, balancing technique, and data subset. Subsequently, results were obtained for each algorithm, and the best result was selected based on the evaluation metrics employed. 
+Given the utilization of various algorithms, distinct subsets of data, and diverse data balancing techniques, multiple result tables are generated.
 
 
-The table below presents a comparison of the best-performing algorithm, along with its corresponding F1 score, the optimal resampling technique employed, and the most effective feature data variation utilized:
 
 
-Logistic Regression 0.46 NCR 3
-Naive Bayes 0.31 NCR 4
-Decision Tree 0.48 None 3
-Random Forest 0.47 None/NCR 2
-SVM 0.48 NCR 4
+The table below presents a comparison of the best-performing algorithm, along with its corresponding F1 score, the optimal resampling technique employed, and the most effective feature data variation utilized: 
+
+![Optimum Parameters](https://github.com/Juliana-Omoba/test/assets/71232282/fbb0d86f-dfdd-4fa0-acf6-ce7045e873de)
+
+
 
 
 ### Discussion
