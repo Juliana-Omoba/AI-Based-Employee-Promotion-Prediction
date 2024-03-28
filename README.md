@@ -23,7 +23,10 @@ Exploratory data analysis was conducted on the employee dataset to address pivot
 - Machine Learning Algorithms:
     - Support Vector Machine (SVM)
     - Decision Tree (DT)
-    - Generative Adversarial Network (GAN)
+    - Logistic Regression
+    - Gaussian Naive Bayes
+    - Random Forest Classifier
+
 
 - Programming Language:
    - Python [Download here](https://www.python.org/)
@@ -136,20 +139,62 @@ To address the dataset's imbalance, a careful selection of five distinct data ba
 
 ### Algorithm Selection
 
-Five distinct machine learning algorithms were chosen for evaluation, encompassing a variety of methodologies:
-
-- Logistic Regression
-- Gaussian Naive Bayes
-- Decision Tree Classifier
-- Random Forest Classifier
-- Support Vector Classifier
+Five distinct machine learning algorithms were chosen for evaluation, encompassing a variety of methodologies.
 
 ### Hyperparameter Tuning
 
-Through the grid searches performed, optimum parameters were found. These optimum parameters for each algorithm/data subset combination are summarized in Table 2
+Following the conducted grid searches, optimal parameters were determined for each combination of algorithm and data subset. These optimal parameters for each algorithm/data subset pairing are succinctly summarized in Table 2.
+
+### Results/ Findings
+
+Training was conducted for each unique combination of algorithm, balancing technique, and data subset. Subsequently, results were obtained for each algorithm, and the best result was selected based on the evaluation metrics employed.
+
+Neighborhood Cleaning Rule Undersampling
+Feature Variation 3      Acc  Prec  Rec   F1    Acc
+			0.78  0.76  0.33 0.46  0.93
+
+
+The table below presents a comparison of the best-performing algorithm, along with its corresponding F1 score, the optimal resampling technique employed, and the most effective feature data variation utilized:
+
+
+Logistic Regression 0.46 NCR 3
+Naive Bayes 0.31 NCR 4
+Decision Tree 0.48 None 3
+Random Forest 0.47 None/NCR 2
+SVM 0.48 NCR 4
+
+
+### Discussion
+This study successfully addresses the research objectives outlined in Aim:
+
+a. Data Balancing Technique: The Neighborhood Cleaning Rule (NCR) proves effective in optimizing model performance across various scenarios and datasets.
+
+b. Factors Influencing Promotion Eligibility: Performance features such as Average Training Score and Previous Year Rating exhibit significant effects on promotion eligibility, while demographic factors like Gender, Age, and Education have minimal impact.
+
+c. Suitable Machine Learning Algorithms: Decision Tree models demonstrate robust performance without resampling techniques. Additionally, Support Vector Machines (SVM) paired with Neighborhood Cleaning Rule undersampling enhance prediction accuracy, emphasizing the importance of algorithm choice and resampling strategy.
+
+d. Performance Metrics: The F1 Score emerges as the preferred metric for evaluating model performance, balancing precision and recall effectively. Further examination of the confusion matrix, precision, and recall provides additional insights into the model's performance and potential benefits.
+
+
+### Challenges
+
+Many functions required extensive runtime, often spanning days, posing significant challenges. To address this, we must refactor the functions to execute within hours while maintaining effectiveness.
+
+### Recommendation
+
+Additional enhancements for future iterations of the project may involve:
+
+1. Intensive Parameter Tuning: Future iterations of the project should include more exhaustive parameter tuning. This entails thoroughly exploring the hyperparameter space of selected machine learning algorithms, possibly using techniques like grid search or random search to optimize model performance. This comprehensive approach compensates for resource limitations encountered during the initial search, ensuring the discovery of optimal hyperparameter configurations.
+   
+2. Analyzing company goals and conducting cost analysis for false positives and false negatives is crucial. Engaging stakeholders ensures alignment with organizational objectives, while assessing associated costs helps select suitable evaluation metrics and refine the model.
+
+3. Exploring more machine learning algorithms is vital for refining the model. Ensemble methods, advanced models like gradient boosting, XGBoost, or neural networks should be considered. Incorporating diverse algorithms helps uncover various strengths and weaknesses, potentially enhancing the model's ability to capture intricate data patterns.
+
+
+4. Model Interpretability: Improving model interpretability is crucial for understanding prediction factors. Techniques like SHAP values or LIME can enhance transparency. Interpretable models build stakeholder trust, and understanding feature contributions aids decision-making.
+   
 
 
 
 
 
-Via the conducted grid searches, optimal parameters were identified for each combination of algorithm and data subset. 
