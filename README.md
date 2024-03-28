@@ -154,7 +154,7 @@ Following the conducted grid searches, optimal parameters were determined for ea
 Training was conducted for each unique combination of algorithm, balancing technique, and data subset. Subsequently, results were obtained for each algorithm, and the best result was selected based on the evaluation metrics employed. 
 Given the utilization of various algorithms, distinct subsets of data, and diverse data balancing techniques, multiple result tables are generated.
 
-
+![](images/SupportVector.png)
 
 
 The table below presents a comparison of the best-performing algorithm, along with its corresponding F1 score, the optimal resampling technique employed, and the most effective feature data variation utilized: 
