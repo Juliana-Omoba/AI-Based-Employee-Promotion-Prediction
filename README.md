@@ -107,26 +107,27 @@ This represents a binary classification problem wherein the dataset exhibits sig
         - MinMax Scaling for Normalization: Additionally, a function was crafted to normalize features utilizing the MinMax scaler method. This function proves beneficial when there is a need to normalize and transform numerical data into a specific range, typically between 0 and 1. 
 
 
-### Data Cleaning/Preparation
+6. Feature Engineering and Selection
 
-During the preliminary stages of data preparation, the following tasks are executed:
-- Data Loading and Inspection.
-- Data Exploration / Analysis / Visualization
-    - Explore Missing Values
-    - Exploration of Individual Attributes: Verify the distribution of each attribute.
-    - Outlier Identification
-    - Explore Feature Correlation
+Efforts were undertaken to discern the dependence of the target variable (is_promoted) on individual features. Features were meticulously examined in isolation, with particular attention directed towards analyzing promotion rates across different categories or ranges within each feature. Significant variations in promotion rates across these categories or ranges suggested heightened importance of the respective feature in predicting promotions. Conversely, consistent promotion rates across categories or ranges indicated lesser significance of the feature in promotion prediction.
 
-### Data Preprocessing
-- Drop Unwanted Features
-- Discretization
-- Capping Outliers
-- Normalizing with Standard Scaler
+Based on the exploratory analysis of the data and the investigation into feature importance, four distinct variations or subsets of data were selected for utilization. The following delineates each subset, specifying the included features and the corresponding data preprocessing steps applied:
 
-### Feature Engineering and Selection
+    Subset 1: This subset encompasses of all the features and undergoes appropriate encoding, outlier capping, and normalization procedures
+
+    Subset 2: This subset includes most features, but differs in that certain features are dropped.
+
+    Subset 3: The third data subset is nearly the same as Subset 2 with the addition of feature categorization of length_of_service
+
+    Subset 4: Building upon Subset 3, this subset further incorporates feature categorization based on promotion rate for the "region" feature.
+
+These variations entail meticulous feature selection, engineering, and transformation, aiming to enhance the model's capacity to discern patterns. By evaluating and comparing models employing each variation, valuable insights can be garnered regarding the significance of various features in predicting the target variable, as well as the impacts of different preprocessing strategies on model efficacy.
+
 
 ### Selection of Balancing Techniques
-Five distinct data balancing methodologies were chosen for evaluation, encompassing three oversampling techniques and two undersampling techniques. The selected data balancing techniques are delineated as follows:
+
+To address the dataset's imbalance, a careful selection of five distinct data balancing methodologies was made, covering three oversampling techniques and two undersampling techniques. The chosen data balancing techniques are outlined as follows:
+
 - Random Oversampling
 - Random Undersampling
 - Synthetic Minority Over-sampling Technique (SMOTE)
@@ -134,13 +135,21 @@ Five distinct data balancing methodologies were chosen for evaluation, encompass
 - Neighborhood Cleaning Rule Undersampling (edited nearest neighbor (ENN)).
 
 ### Algorithm Selection
-Five different machine learning algorithms were selected for evaluation. These are:
-Logistic Regression
-Gaussian Naive Bayes
-Decision Tree Classifier
-Random Forest Classifier
-Support Vector Classifier
+
+Five distinct machine learning algorithms were chosen for evaluation, encompassing a variety of methodologies:
+
+- Logistic Regression
+- Gaussian Naive Bayes
+- Decision Tree Classifier
+- Random Forest Classifier
+- Support Vector Classifier
 
 ### Hyperparameter Tuning
+
+Through the grid searches performed, optimum parameters were found. These optimum parameters for each algorithm/data subset combination are summarized in Table 2
+
+
+
+
 
 Via the conducted grid searches, optimal parameters were identified for each combination of algorithm and data subset. 
