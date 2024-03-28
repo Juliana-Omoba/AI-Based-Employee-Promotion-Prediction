@@ -145,6 +145,10 @@ Five distinct machine learning algorithms were chosen for evaluation, encompassi
 
 Following the conducted grid searches, optimal parameters were determined for each combination of algorithm and data subset. These optimal parameters for each algorithm/data subset pairing are succinctly summarized in Table 2.
 
+
+![Optimum Parameters](https://github.com/Juliana-Omoba/test/assets/71232282/42a398b4-29a5-4da7-b8ae-3749f73e5a51)
+
+
 ### Results/ Findings
 
 Training was conducted for each unique combination of algorithm, balancing technique, and data subset. Subsequently, results were obtained for each algorithm, and the best result was selected based on the evaluation metrics employed.
